@@ -140,6 +140,20 @@ a {
   transition: all var(--transition-fast);
 }
 
+/* When mobile menu is open: 100% opaque, no backdrop-filter to prevent containing-block bugs */
+.header-glass.mobile-menu-active {
+  background: #FAF8F5 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  z-index: 1000 !important;
+}
+
+.mobile-nav-drawer {
+  background: #FAF8F5 !important;
+  opacity: 1 !important;
+  overscroll-behavior: contain;
+}
+
 .nav-container {
   max-width: 1360px;
   margin: 0 auto;
