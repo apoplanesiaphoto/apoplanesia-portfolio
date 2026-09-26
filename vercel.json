@@ -1,0 +1,45 @@
+{
+  "redirects": [
+    {
+      "source": "/contactos",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/contacto",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/sobre",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/precos",
+      "destination": "/precos",
+      "permanent": false
+    },
+    {
+      "source": "/pricing",
+      "destination": "/precos",
+      "permanent": true
+    },
+    {
+      "source": "/proposta",
+      "destination": "/precos",
+      "permanent": true
+    },
+    {
+      "source": "/portefolio",
+      "destination": "/portfolio",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
