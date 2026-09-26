@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Phone, Mail, Instagram, MapPin, Send, MessageCircle, CheckCircle2, Inbox, QrCode } from 'lucide-react';
+import { Phone, Mail, Instagram, MapPin, Send, MessageCircle, CheckCircle2, Inbox, QrCode, Loader2, AlertCircle } from 'lucide-react';
 
 export default function ContactPage({ lang, t }) {
   const [searchParams] = useSearchParams();
@@ -17,6 +17,8 @@ export default function ContactPage({ lang, t }) {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const c = t.contact;
 
   useEffect(() => {
@@ -30,21 +32,49 @@ export default function ContactPage({ lang, t }) {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setErrorMessage('');
 
-    const serviceText = formData.service === 'duvida' 
-      ? 'esclarecer uma dúvida' 
-      : `agendar uma sessão de ${formData.service}`;
-    const locationPart = formData.location ? ` em ${formData.location}` : '';
-    const detailsPart = formData.message ? `. Mensagem: ${formData.message}` : '';
-    const msg = `Olá Eva! O meu nome é ${formData.name}. Gostaria de ${serviceText}${locationPart}${detailsPart}`;
-    const whatsappUrl = `https://wa.me/351960234062?text=${encodeURIComponent(msg)}`;
-    
-    setTimeout(() => {
-      window.open(whatsappUrl, '_blank');
-    }, 1200);
+    const serviceLabel = c.form.services[formData.service] || formData.service;
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/apoplanesia.photo@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: `Novo Contacto - Apoplanesia Photo: ${formData.name} (${serviceLabel})`,
+          _replyto: formData.email,
+          _template: 'table',
+          _captcha: 'false',
+          Nome: formData.name,
+          Email: formData.email,
+          Telefone: formData.phone,
+          'Tipo de Sessão / Contacto': serviceLabel,
+          'Localidade': formData.location || 'Não especificado',
+          'Mensagem': formData.message || 'Sem mensagem adicional'
+        })
+      });
+
+      const result = await response.json();
+
+      if (response.ok && (result.success === 'true' || result.success === true || (result.message && result.message.toLowerCase().includes('activation')))) {
+        setSubmitted(true);
+      } else {
+        throw new Error(result.message || 'Falha no envio da mensagem');
+      }
+    } catch (err) {
+      console.error('Submission error:', err);
+      setErrorMessage(c.form.error || (lang === 'pt' 
+        ? 'Ocorreu um erro no envio. Por favor tenta de novo ou contacta diretamente via WhatsApp ou email.' 
+        : 'An error occurred while sending. Please try again or reach out directly via WhatsApp or email.'));
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -261,18 +291,41 @@ export default function ContactPage({ lang, t }) {
                   <CheckCircle2 size={32} />
                 </div>
                 <h4 style={{ fontSize: '1.4rem', color: 'var(--text-main)', marginBottom: '0.5rem' }}>
-                  {lang === 'pt' ? "Mensagem Preparada!" : "Message Prepared!"}
+                  {lang === 'pt' ? "Mensagem Enviada com Sucesso!" : "Message Sent Successfully!"}
                 </h4>
                 <p style={{ color: 'var(--text-body)', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>
                   {c.form.success}
                 </p>
-                <button
-                  onClick={() => setSubmitted(false)}
-                  className="btn-secondary"
-                  style={{ fontSize: '0.9rem' }}
-                >
-                  {lang === 'pt' ? "Enviar Outra Mensagem" : "Send Another Message"}
-                </button>
+                <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  <button
+                    onClick={() => {
+                      setSubmitted(false);
+                      setFormData({
+                        name: '',
+                        email: '',
+                        phone: '',
+                        service: initialService || 'casal',
+                        date: '',
+                        location: '',
+                        message: ''
+                      });
+                    }}
+                    className="btn-secondary"
+                    style={{ fontSize: '0.9rem' }}
+                  >
+                    {lang === 'pt' ? "Enviar Outra Mensagem" : "Send Another Message"}
+                  </button>
+                  <a
+                    href="https://wa.me/351960234062"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary"
+                    style={{ fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
+                  >
+                    <MessageCircle size={16} />
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
@@ -445,13 +498,51 @@ export default function ContactPage({ lang, t }) {
                   />
                 </div>
 
+                {errorMessage && (
+                  <div style={{
+                    background: '#FEF2F2',
+                    border: '1px solid #FCA5A5',
+                    borderRadius: 'var(--radius-sm)',
+                    padding: '0.85rem 1rem',
+                    color: '#B91C1C',
+                    fontSize: '0.9rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.6rem'
+                  }}>
+                    <AlertCircle size={18} style={{ flexShrink: 0 }} />
+                    <div style={{ flex: 1 }}>{errorMessage}</div>
+                  </div>
+                )}
+
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className="btn-primary"
-                  style={{ width: '100%', padding: '0.9rem', fontSize: '1rem', marginTop: '0.5rem' }}
+                  style={{
+                    width: '100%',
+                    padding: '0.9rem',
+                    fontSize: '1rem',
+                    marginTop: '0.5rem',
+                    opacity: isSubmitting ? 0.75 : 1,
+                    cursor: isSubmitting ? 'not-allowed' : 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '0.5rem'
+                  }}
                 >
-                  <Send size={18} />
-                  <span>{c.form.submit}</span>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 size={18} className="spin" />
+                      <span>{c.form.submitting}</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send size={18} />
+                      <span>{c.form.submit}</span>
+                    </>
+                  )}
                 </button>
               </form>
             )}

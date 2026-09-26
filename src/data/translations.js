@@ -231,8 +231,9 @@ export const translations = {
         message: "A tua mensagem ou ideias",
         messagePlaceholder: "Conta-me como imaginas a tua sessão...",
         submit: "Enviar mensagem",
-        submitting: "A preparar mensagem...",
-        success: "Mensagem enviada com sucesso! Entrarei em contacto contigo muito brevemente."
+        submitting: "A enviar mensagem...",
+        success: "Mensagem enviada com sucesso para apoplanesia.photo@gmail.com! Entrarei em contacto contigo muito brevemente.",
+        error: "Ocorreu um erro no envio. Por favor tenta de novo ou contacta diretamente via WhatsApp ou email."
       }
     },
     footer: {
@@ -476,8 +477,9 @@ export const translations = {
         message: "Your message or vision",
         messagePlaceholder: "Tell me about your ideas for the session...",
         submit: "Send Message",
-        submitting: "Preparing message...",
-        success: "Message sent successfully! I will reach out to you very soon."
+        submitting: "Sending message...",
+        success: "Message sent successfully to apoplanesia.photo@gmail.com! I will reach out to you very soon.",
+        error: "An error occurred while sending. Please try again or reach out directly via WhatsApp or email."
       }
     },
     footer: {
