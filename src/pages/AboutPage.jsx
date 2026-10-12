@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Camera, Smile, Clock, Instagram, Facebook, Linkedin, ArrowRight, MessageCircle, Calendar, Sparkles, CheckCircle2, Zap } from 'lucide-react';
+import { Heart, Camera, Smile, Clock, Instagram, Facebook, Linkedin, ArrowRight, MessageCircle, Calendar, Sparkles, CheckCircle2, Zap, Target, Eye, ShieldCheck, Lock, Leaf } from 'lucide-react';
 import SharkIcon from '../components/SharkIcon';
 
 export default function AboutPage({ lang, t }) {
@@ -212,6 +212,192 @@ export default function AboutPage({ lang, t }) {
             })}
           </div>
         </section>
+
+        {/* Mission, Vision & Values Section ("Missão, Visão e Valores") */}
+        {a.missionVisionValues && (
+          <section style={{
+            marginBottom: '5rem'
+          }}>
+            {/* Section Header */}
+            <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 3.5rem auto' }}>
+              <span className="pill-badge" style={{ marginBottom: '0.75rem' }}>
+                <Sparkles size={14} />
+                <span>{a.missionVisionValues.badge}</span>
+              </span>
+              <h2 style={{ fontSize: 'clamp(2.2rem, 4vw, 3rem)', color: 'var(--text-main)', marginBottom: '0.5rem', fontWeight: 600 }}>
+                {a.missionVisionValues.title}
+              </h2>
+              <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', lineHeight: 1.6 }}>
+                {a.missionVisionValues.subtitle}
+              </p>
+            </div>
+
+            {/* Mission & Vision Cards (Top 2-column spotlight) */}
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+              gap: '2rem',
+              marginBottom: '3rem'
+            }}>
+              {/* Mission Card */}
+              <div style={{
+                background: 'linear-gradient(135deg, #FAF6FC 0%, #FFFFFF 100%)',
+                border: '1.5px solid var(--accent-lilac-soft)',
+                borderRadius: 'var(--radius-lg)',
+                padding: '2.5rem 2rem',
+                boxShadow: 'var(--shadow-card)',
+                position: 'relative',
+                overflow: 'hidden'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.25rem' }}>
+                  <div style={{
+                    width: '52px',
+                    height: '52px',
+                    borderRadius: '50%',
+                    background: 'var(--accent-lilac)',
+                    color: '#FFFFFF',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: '0 4px 14px var(--accent-lilac-glow)',
+                    flexShrink: 0
+                  }}>
+                    <Target size={26} />
+                  </div>
+                  <div>
+                    <span style={{ fontSize: '0.8rem', color: 'var(--accent-lilac-dark)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                      {lang === 'pt' ? 'Propósito' : 'Purpose'}
+                    </span>
+                    <h3 style={{ fontSize: '1.8rem', color: 'var(--text-main)', fontWeight: 600, margin: 0 }}>
+                      {a.missionVisionValues.missionTitle}
+                    </h3>
+                  </div>
+                </div>
+                <p style={{ color: 'var(--text-body)', fontSize: '1.05rem', lineHeight: 1.75, margin: 0 }}>
+                  {a.missionVisionValues.missionText}
+                </p>
+              </div>
+
+              {/* Vision Card */}
+              <div style={{
+                background: 'linear-gradient(135deg, #FFFFFF 0%, #FAF8F5 100%)',
+                border: '1.5px solid var(--border-card)',
+                borderRadius: 'var(--radius-lg)',
+                padding: '2.5rem 2rem',
+                boxShadow: 'var(--shadow-card)',
+                position: 'relative',
+                overflow: 'hidden'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.25rem' }}>
+                  <div style={{
+                    width: '52px',
+                    height: '52px',
+                    borderRadius: '50%',
+                    background: 'var(--bg-lilac-subtle)',
+                    color: 'var(--accent-lilac)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: 'var(--shadow-subtle)',
+                    flexShrink: 0
+                  }}>
+                    <Eye size={26} />
+                  </div>
+                  <div>
+                    <span style={{ fontSize: '0.8rem', color: 'var(--accent-lilac-dark)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                      {lang === 'pt' ? 'Direção' : 'Direction'}
+                    </span>
+                    <h3 style={{ fontSize: '1.8rem', color: 'var(--text-main)', fontWeight: 600, margin: 0 }}>
+                      {a.missionVisionValues.visionTitle}
+                    </h3>
+                  </div>
+                </div>
+                <p style={{ color: 'var(--text-body)', fontSize: '1.05rem', lineHeight: 1.75, margin: 0 }}>
+                  {a.missionVisionValues.visionText}
+                </p>
+              </div>
+            </div>
+
+            {/* Core Values Section */}
+            <div style={{
+              background: '#FFFFFF',
+              borderRadius: 'var(--radius-lg)',
+              padding: 'clamp(2.5rem, 5vw, 4rem)',
+              border: '1.5px solid var(--border-card)',
+              boxShadow: 'var(--shadow-card)'
+            }}>
+              <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+                <span className="pill-badge" style={{ marginBottom: '0.65rem' }}>
+                  <Leaf size={14} color="#059669" />
+                  <span>{lang === 'pt' ? 'Princípios Orientadores' : 'Guiding Principles'}</span>
+                </span>
+                <h3 style={{ fontSize: '2.2rem', color: 'var(--text-main)', fontWeight: 600 }}>
+                  {a.missionVisionValues.valuesTitle}
+                </h3>
+              </div>
+
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                gap: '2rem'
+              }}>
+                {a.missionVisionValues.values.map((val, vIdx) => {
+                  let valIcon;
+                  if (val.id === 'precos') valIcon = <ShieldCheck size={24} color="var(--accent-lilac)" />;
+                  else if (val.id === 'proximidade') valIcon = <Heart size={24} color="var(--accent-lilac)" />;
+                  else if (val.id === 'respeito') valIcon = <Lock size={24} color="var(--accent-lilac)" />;
+                  else if (val.id === 'qualidade') valIcon = <CheckCircle2 size={24} color="var(--accent-lilac)" />;
+                  else valIcon = <Sparkles size={24} color="var(--accent-lilac)" />;
+
+                  return (
+                    <div
+                      key={val.id || vIdx}
+                      style={{
+                        background: 'var(--bg-page)',
+                        borderRadius: 'var(--radius-md)',
+                        padding: '2rem 1.75rem',
+                        border: '1px solid var(--border-card)',
+                        transition: 'all 0.3s ease'
+                      }}
+                      onMouseOver={e => {
+                        e.currentTarget.style.transform = 'translateY(-4px)';
+                        e.currentTarget.style.borderColor = 'var(--accent-lilac)';
+                        e.currentTarget.style.boxShadow = 'var(--shadow-card)';
+                      }}
+                      onMouseOut={e => {
+                        e.currentTarget.style.transform = 'none';
+                        e.currentTarget.style.borderColor = 'var(--border-card)';
+                        e.currentTarget.style.boxShadow = 'none';
+                      }}
+                    >
+                      <div style={{
+                        width: '46px',
+                        height: '46px',
+                        borderRadius: '50%',
+                        background: '#FFFFFF',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        marginBottom: '1.25rem',
+                        boxShadow: 'var(--shadow-subtle)'
+                      }}>
+                        {valIcon}
+                      </div>
+
+                      <h4 style={{ fontSize: '1.25rem', color: 'var(--text-main)', fontWeight: 600, marginBottom: '0.65rem' }}>
+                        {val.title}
+                      </h4>
+
+                      <p style={{ color: 'var(--text-body)', fontSize: '0.96rem', lineHeight: 1.65, margin: 0 }}>
+                        {val.desc}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Social Connection Buttons Section */}
         <section style={{

@@ -67,6 +67,11 @@ export default function Footer({ t }) {
                 </Link>
               </li>
               <li>
+                <Link to="/faq" style={{ color: 'var(--text-muted)', transition: 'color 0.2s ease', fontSize: '0.95rem' }} onMouseOver={e => e.target.style.color = 'var(--accent-lilac)'} onMouseOut={e => e.target.style.color = 'var(--text-muted)'}>
+                  {t.nav.faq}
+                </Link>
+              </li>
+              <li>
                 <Link to="/contact" style={{ color: 'var(--text-muted)', transition: 'color 0.2s ease', fontSize: '0.95rem' }} onMouseOver={e => e.target.style.color = 'var(--accent-lilac)'} onMouseOut={e => e.target.style.color = 'var(--text-muted)'}>
                   {t.nav.contact}
                 </Link>

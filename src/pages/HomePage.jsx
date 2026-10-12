@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Heart, ShieldCheck, Smile, Clock, Camera, MessageCircle, Calendar } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
+import ChristmasBanner from '../components/ChristmasBanner';
 
 export default function HomePage({ lang, t }) {
   const categories = portfolioData.categories;
@@ -120,6 +121,9 @@ export default function HomePage({ lang, t }) {
           </div>
         </div>
       </section>
+
+      {/* SPECIAL CHRISTMAS SESSIONS BANNER */}
+      <ChristmasBanner lang={lang} t={t} />
 
       {/* AESTHETIC EDITORIAL PORTFOLIO SECTION */}
       <section className="section-padding">

@@ -10,8 +10,8 @@ export const portfolioData = {
     "subtitleEn": "Intimate moments, romance and genuine connection",
     "descPt": "Sessões fotográficas emotivas e naturais onde o carinho e a espontaneidade ganham vida, seja ao pôr do sol, na praia ou em recantos cheios de significado.",
     "descEn": "Emotional, documentary-style couple sessions celebrating natural connection, genuine laughter, and love in scenic Portuguese landscapes.",
-    "bannerImage": "/assets/gallery/casais/casais_003.jpg",
-    "count": 107,
+    "bannerImage": "/assets/gallery/casais/casais_sp_capa.jpg",
+    "count": 115,
     "subfilters": [
       {
         "id": "exterior",
@@ -135,6 +135,86 @@ export const portfolioData = {
 ],
 
   items: [
+  {
+    "id": "casais-sp-capa",
+    "category": "casais",
+    "subCategory": "exterior",
+    "titlePt": "Stefania & Pedro • Capa",
+    "titleEn": "Stefania & Pedro • Cover",
+    "location": "Porto, Portugal",
+    "date": "2026",
+    "image": "/assets/gallery/casais/casais_sp_capa.jpg"
+  },
+  {
+    "id": "casais-sp-1",
+    "category": "casais",
+    "subCategory": "exterior",
+    "titlePt": "Stefania & Pedro #1",
+    "titleEn": "Stefania & Pedro #1",
+    "location": "Porto, Portugal",
+    "date": "2026",
+    "image": "/assets/gallery/casais/casais_sp_002.jpg"
+  },
+  {
+    "id": "casais-sp-2",
+    "category": "casais",
+    "subCategory": "intimista",
+    "titlePt": "Stefania & Pedro #2",
+    "titleEn": "Stefania & Pedro #2",
+    "location": "Porto, Portugal",
+    "date": "2026",
+    "image": "/assets/gallery/casais/casais_sp_068.jpg"
+  },
+  {
+    "id": "casais-sp-3",
+    "category": "casais",
+    "subCategory": "por_do_sol",
+    "titlePt": "Stefania & Pedro #3",
+    "titleEn": "Stefania & Pedro #3",
+    "location": "Porto, Portugal",
+    "date": "2026",
+    "image": "/assets/gallery/casais/casais_sp_072.jpg"
+  },
+  {
+    "id": "casais-sp-4",
+    "category": "casais",
+    "subCategory": "exterior",
+    "titlePt": "Stefania & Pedro #4",
+    "titleEn": "Stefania & Pedro #4",
+    "location": "Porto, Portugal",
+    "date": "2026",
+    "image": "/assets/gallery/casais/casais_sp_104.jpg"
+  },
+  {
+    "id": "casais-sp-5",
+    "category": "casais",
+    "subCategory": "intimista",
+    "titlePt": "Stefania & Pedro #5",
+    "titleEn": "Stefania & Pedro #5",
+    "location": "Porto, Portugal",
+    "date": "2026",
+    "image": "/assets/gallery/casais/casais_sp_106.jpg"
+  },
+  {
+    "id": "casais-sp-6",
+    "category": "casais",
+    "subCategory": "por_do_sol",
+    "titlePt": "Stefania & Pedro #6",
+    "titleEn": "Stefania & Pedro #6",
+    "location": "Porto, Portugal",
+    "date": "2026",
+    "image": "/assets/gallery/casais/casais_sp_109.jpg"
+  },
+  {
+    "id": "casais-sp-7",
+    "category": "casais",
+    "subCategory": "exterior",
+    "titlePt": "Stefania & Pedro #7",
+    "titleEn": "Stefania & Pedro #7",
+    "location": "Porto, Portugal",
+    "date": "2026",
+    "image": "/assets/gallery/casais/casais_sp_110.jpg"
+  },
   {
     "id": "casais-1",
     "category": "casais",

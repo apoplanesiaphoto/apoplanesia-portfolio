@@ -5,6 +5,7 @@ export const translations = {
       portfolio: "Portfólio",
       pricing: "Preços & Pacotes",
       about: "Sobre Mim",
+      faq: "FAQ",
       contact: "Contacto",
       language: "PT / EN",
       bookSession: "Agendar Sessão"
@@ -18,6 +19,22 @@ export const translations = {
       btnContact: "Falar Comigo",
       badge: "Fotografia Emocional & Autêntica",
       btnWhatsapp: "WhatsApp"
+    },
+    christmasBanner: {
+      badge: "Sessões Especiais de Natal • Vagas Limitadas",
+      title: "As sessões de Natal já chegaram!",
+      subtitle: "Cenário natalício em estúdio, memórias especiais e fotografias para guardar para sempre.",
+      discountBadge: "Promoção de Lançamento",
+      discountText: "Marca já a tua sessão e aproveita 20€ de desconto até 31 de outubro!",
+      features: [
+        "Cenário temático exclusivo em estúdio",
+        "Fotografias tratadas com entrega em 7 dias",
+        "Ideal para casais, famílias, crianças e pets",
+        "Porto • Vagas limitadas por marcação"
+      ],
+      btnBook: "Agendar Sessão de Natal",
+      btnWhatsapp: "Saber Mais via WhatsApp",
+      whatsappMsg: "Olá Eva! Gostaria de saber mais informações e agendar uma sessão de Natal com o desconto de 20€!"
     },
     hub: {
       title: "PORTFÓLIO & GALERIAS",
@@ -190,6 +207,118 @@ export const translations = {
         instaHobbie: "Instagram Pessoal & Hobbie (@apoplanesia.hobbie)",
         facebook: "Facebook Oficial (Apoplanesia Photo)",
         linkedin: "LinkedIn (Eva Santos)"
+      },
+      missionVisionValues: {
+        badge: "Identidade & Propósito",
+        title: "Missão, Visão e Valores",
+        subtitle: "Os princípios, o compromisso e a sensibilidade que definem a essência da Apoplanesia Photo.",
+        missionTitle: "Missão",
+        missionText: "Eternizar momentos através da fotografia, numa experiência de proximidade com o cliente, sempre num ambiente confortável e personalizado, onde todos são respeitados, valorizados e livres para serem quem são.",
+        visionTitle: "Visão",
+        visionText: "Construir uma marca de referência, reconhecida pela qualidade, transparência e confiança, onde cada cliente sabe que a sua história será contada com sensibilidade e cuidado.",
+        valuesTitle: "Valores",
+        values: [
+          {
+            id: "precos",
+            icon: "precos",
+            title: "Preços transparentes",
+            desc: "Preços claros e acessíveis, sem surpresas ou custos escondidos. Acredito que a confiança começa muito antes da sessão."
+          },
+          {
+            id: "proximidade",
+            icon: "proximidade",
+            title: "Proximidade e empatia",
+            desc: "Construo relações genuínas com os meus clientes, ouvindo as suas necessidades e adaptando cada experiência a quem tenho à minha frente."
+          },
+          {
+            id: "respeito",
+            icon: "respeito",
+            title: "Respeito, privacidade e conforto",
+            desc: "Crio um ambiente acolhedor e livre de julgamentos, onde os limites, a intimidade e a individualidade de cada pessoa são sempre respeitados."
+          },
+          {
+            id: "qualidade",
+            icon: "qualidade",
+            title: "Qualidade e compromisso",
+            desc: "Trabalho com profissionalismo, dedicação e atenção ao detalhe, procurando garantir um serviço de qualidade, sempre."
+          },
+          {
+            id: "autenticidade",
+            icon: "autenticidade",
+            title: "Autenticidade e sensibilidade",
+            desc: "Valorizo as emoções reais, as ligações genuínas e a beleza individual, sem padrões, limites ou expectativas impostas."
+          }
+        ]
+      }
+    },
+    faq: {
+      badge: "Perguntas Frequentes",
+      title: "DÚVIDAS & FAQ",
+      subtitle: "Tudo o que precisas de saber sobre como funcionam as sessões, vestuário, pagamentos e entrega das fotografias.",
+      questions: [
+        {
+          id: "pousar",
+          q: "Nunca fiz uma sessão e não sei pousar…",
+          a: "Não tens de te preocupar com isso. Faz parte do meu trabalho e estarei contigo a guiar-te durante toda a sessão. Se tiveres inspirações que gostas, podes também levá-las contigo para te ajudar a ter «um fio condutor»."
+        },
+        {
+          id: "roupa",
+          q: "O que devo levar vestido?",
+          a: "Escolhe roupa confortável em que te sintas bonit@ e confiante. Evita roupa com padrões, riscas muito finas, logotipos ou cores fluorescentes."
+        },
+        {
+          id: "troca-roupa",
+          q: "Posso trocar de roupa durante a minha sessão?",
+          a: "Sim, as vezes que quiseres dentro do tempo previsto da sessão."
+        },
+        {
+          id: "acessorios",
+          q: "Posso levar acessórios?",
+          a: "Claro que sim! Máscaras, ecografias, flores, vinho, velas,… todos são bem-vindos."
+        },
+        {
+          id: "pet",
+          q: "Posso levar o meu pet para a minha sessão?",
+          a: "SIM! O teu pet é mais do que bem-vindo para sessões ao ar livre e pode fazer parte da tua sessão.\nNota: Sessão apenas de pet tem um valor diferente."
+        },
+        {
+          id: "pagamento",
+          q: "Como é feito o pagamento?",
+          a: "O pagamento de qualquer sessão pode ser feito por MBWay, transferência bancária ou em numerário. É sempre pedido o pagamento de 50% do valor da sessão para confirmar o horário. O restante valor pode ser pago até ao dia da sessão ou da entrega das fotos."
+        },
+        {
+          id: "envio-fotos",
+          q: "Como é feito o envio das fotos?",
+          a: "As fotos são enviadas pela plataforma Pixieset. Lá, vais encontrar todas as fotos editadas, por vezes mais do que as contratadas. Aqui, as fotos têm ainda marca d’água. Deverás selecionar as que mais gostas até ao número de fotografias que contrataste, assim quem decide as fotos finais és tu!"
+        },
+        {
+          id: "mais-fotos",
+          q: "E se eu gostar de mais fotos do que as que contratei inicialmente?",
+          a: "Não há problema! Podes selecionar todas as que quiseres e pagar à parte cada uma das fotos extra."
+        },
+        {
+          id: "fotos-extra",
+          q: "Qual o valor das fotos extra?",
+          a: "Podes escolher fotografias adicionais com os seguintes valores:",
+          tiers: [
+            { count: "1 a 4 fotos", price: "3€ cada", note: "Por foto avulso" },
+            { count: "5 fotos", price: "12€", unit: "2,40€ / foto", note: "Poupança de 20%" },
+            { count: "10 fotos", price: "20€", unit: "2,00€ / foto", note: "Poupança de 33%" },
+            { count: "Galeria completa", price: "0,65€ / foto", note: "Melhor valor por foto", highlight: true }
+          ]
+        },
+        {
+          id: "download",
+          q: "Selecionei as fotos todas, mas não consigo fazer o download!",
+          a: "Depois de selecionares todas as fotos que queres, envio-te o link final por onde podes fazer o download das tuas fotos favoritas em alta resolução e sem marca d’água."
+        }
+      ],
+      cta: {
+        title: "Ainda tens alguma dúvida?",
+        subtitle: "Não hesites em enviar-me uma mensagem. Estou disponível para tirar qualquer dúvida e planear a tua sessão ideal!",
+        btnContact: "Enviar Mensagem",
+        btnWhatsapp: "Falar no WhatsApp",
+        whatsappMsg: "Olá Eva! Estive a ver o teu site e as perguntas frequentes, mas gostaria de tirar uma dúvida sobre uma sessão."
       }
     },
     contact: {
@@ -215,6 +344,7 @@ export const translations = {
         service: "Tipo de Sessão ou Contacto",
         serviceSelect: "Seleciona uma opção...",
         services: {
+          natal: "Sessão de Natal em Estúdio (Desconto de 20€ até 31/10)",
           casal: "Casal (35 fotos • 100€)",
           retrato: "Retrato (25 fotos • 70€)",
           gravida: "Grávida / Maternidade (30 fotos • 85€)",
@@ -252,6 +382,7 @@ export const translations = {
       portfolio: "Portfolio",
       pricing: "Pricing & Packages",
       about: "About Me",
+      faq: "FAQ",
       contact: "Contact",
       language: "EN / PT",
       bookSession: "Book a Shoot"
@@ -265,6 +396,22 @@ export const translations = {
       btnContact: "Get in Touch",
       badge: "Emotional & Authentic Photography",
       btnWhatsapp: "WhatsApp"
+    },
+    christmasBanner: {
+      badge: "Special Christmas Sessions • Limited Availability",
+      title: "Christmas sessions have arrived!",
+      subtitle: "Studio Christmas scenery, special memories, and photographs to treasure forever.",
+      discountBadge: "Early Bird Offer",
+      discountText: "Book your session now and enjoy a 20€ discount until October 31st!",
+      features: [
+        "Exclusive themed studio setup",
+        "Professionally edited photos delivered in 7 days",
+        "Perfect for couples, families, children & pets",
+        "Porto • Limited slots by reservation"
+      ],
+      btnBook: "Book Christmas Session",
+      btnWhatsapp: "Inquire via WhatsApp",
+      whatsappMsg: "Hi Eva! I would love to get more details and book a Christmas session with the 20€ discount!"
     },
     hub: {
       title: "PORTFOLIO & GALLERIES",
@@ -437,6 +584,118 @@ export const translations = {
         instaHobbie: "Personal & Hobby Instagram (@apoplanesia.hobbie)",
         facebook: "Official Facebook (Apoplanesia Photo)",
         linkedin: "LinkedIn Profile (Eva Santos)"
+      },
+      missionVisionValues: {
+        badge: "Identity & Purpose",
+        title: "Mission, Vision & Values",
+        subtitle: "The principles, commitment, and sensitivity that define the essence of Apoplanesia Photo.",
+        missionTitle: "Mission",
+        missionText: "To preserve timeless moments through photography in an intimate, tailored experience, always within a welcoming and comfortable atmosphere where everyone is respected, cherished, and free to be themselves.",
+        visionTitle: "Vision",
+        visionText: "To build a benchmark brand recognized for quality, transparency, and trust, where every client knows their unique story will be captured with artistry, sensitivity, and care.",
+        valuesTitle: "Core Values",
+        values: [
+          {
+            id: "precos",
+            icon: "precos",
+            title: "Transparent Pricing",
+            desc: "Clear and accessible pricing with zero surprises or hidden costs. Trust begins well before the camera clicks."
+          },
+          {
+            id: "proximidade",
+            icon: "proximidade",
+            title: "Closeness & Empathy",
+            desc: "Building genuine connections with clients, listening to their needs, and adapting each experience to the person in front of me."
+          },
+          {
+            id: "respeito",
+            icon: "respeito",
+            title: "Respect, Privacy & Comfort",
+            desc: "A safe, non-judgmental space where individual boundaries, intimacy, and comfort are unconditionally honored."
+          },
+          {
+            id: "qualidade",
+            icon: "qualidade",
+            title: "Quality & Commitment",
+            desc: "Professionalism, technical dedication, and meticulous care for every detail to guarantee excellence in every delivery."
+          },
+          {
+            id: "autenticidade",
+            icon: "autenticidade",
+            title: "Authenticity & Sensitivity",
+            desc: "Celebrating real emotions, true connections, and personal beauty without imposed trends, limits, or artificial expectations."
+          }
+        ]
+      }
+    },
+    faq: {
+      badge: "Frequently Asked Questions",
+      title: "QUESTIONS & FAQ",
+      subtitle: "Everything you need to know about photo sessions, outfits, payments, and photo delivery.",
+      questions: [
+        {
+          id: "pousar",
+          q: "I've never done a photo shoot and don't know how to pose…",
+          a: "You don't have to worry about that at all! Guiding you throughout the entire shoot is part of my job. If you have reference photos or inspirations you love, feel free to bring them along to help set the creative direction."
+        },
+        {
+          id: "roupa",
+          q: "What should I wear?",
+          a: "Choose comfortable clothes that make you feel beautiful, confident, and like yourself. Avoid heavy patterns, very thin stripes, large logos, or neon fluorescent colors."
+        },
+        {
+          id: "troca-roupa",
+          q: "Can I change outfits during the session?",
+          a: "Yes, as many times as you like within the booked session time!"
+        },
+        {
+          id: "acessorios",
+          q: "Can I bring accessories?",
+          a: "Of course! Masks, ultrasound prints, flowers, wine, candles... they are all very welcome!"
+        },
+        {
+          id: "pet",
+          q: "Can I bring my pet to my session?",
+          a: "YES! Your pet is more than welcome for outdoor sessions and can be part of your shoot.\nNote: Solo pet sessions have separate package pricing."
+        },
+        {
+          id: "pagamento",
+          q: "How is payment handled?",
+          a: "Payment for any session can be made via MBWay, bank transfer, or in cash. A 50% deposit is always requested to secure your time slot. The remaining balance can be settled up to the day of the shoot or upon photo delivery."
+        },
+        {
+          id: "envio-fotos",
+          q: "How are the photos delivered?",
+          a: "Photos are delivered via the Pixieset online platform. There, you will find all edited photos, often more than the contracted amount. At this stage, photos carry a watermark. You choose your favorite photos up to your package count — so you are the one who decides the final selection!"
+        },
+        {
+          id: "mais-fotos",
+          q: "What if I love more photos than originally contracted?",
+          a: "No problem at all! You can select as many as you wish and purchase extra photos separately."
+        },
+        {
+          id: "fotos-extra",
+          q: "How much do extra photos cost?",
+          a: "You can purchase additional edited photos with the following pricing:",
+          tiers: [
+            { count: "1 to 4 photos", price: "3€ each", note: "Single extra photo" },
+            { count: "5 photos", price: "12€", unit: "2.40€ / photo", note: "20% savings" },
+            { count: "10 photos", price: "20€", unit: "2.00€ / photo", note: "33% savings" },
+            { count: "Full gallery", price: "0.65€ / photo", note: "Best value per photo", highlight: true }
+          ]
+        },
+        {
+          id: "download",
+          q: "I selected all my photos, but can't download them!",
+          a: "Once you've made your final selection, I will send you the final link where you can download all your chosen high-resolution photos without watermarks."
+        }
+      ],
+      cta: {
+        title: "Still have any questions?",
+        subtitle: "Feel free to reach out anytime. I'm always available to help and plan your ideal photo session!",
+        btnContact: "Send Message",
+        btnWhatsapp: "Chat on WhatsApp",
+        whatsappMsg: "Hi Eva! I was reading your FAQ on the website and would love to ask a quick question about booking a session."
       }
     },
     contact: {
@@ -461,6 +720,7 @@ export const translations = {
         service: "Type of Session or Contact",
         serviceSelect: "Select an option...",
         services: {
+          natal: "Christmas Studio Session (20€ Discount until Oct 31)",
           casal: "Couple (35 photos • 100€)",
           retrato: "Portrait (25 photos • 70€)",
           gravida: "Maternity (30 photos • 85€)",

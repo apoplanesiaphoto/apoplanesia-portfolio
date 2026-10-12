@@ -10,6 +10,7 @@ import PortfolioHub from './pages/PortfolioHub';
 import CategoryGalleryPage from './pages/CategoryGalleryPage';
 import PricingPage from './pages/PricingPage';
 import AboutPage from './pages/AboutPage';
+import FaqPage from './pages/FaqPage';
 import ContactPage from './pages/ContactPage';
 import SitemapPage from './pages/SitemapPage';
 
@@ -85,6 +86,10 @@ export default function App() {
           {/* About Route */}
           <Route path="/about" element={<AboutPage lang={lang} t={t} />} />
           <Route path="/sobre" element={<Navigate to="/about" replace />} />
+
+          {/* FAQ Route */}
+          <Route path="/faq" element={<FaqPage lang={lang} t={t} />} />
+          <Route path="/perguntas-frequentes" element={<Navigate to="/faq" replace />} />
 
           {/* Contact Route */}
           <Route path="/contact" element={<ContactPage lang={lang} t={t} />} />

@@ -433,6 +433,7 @@ export default function ContactPage({ lang, t }) {
                       color: 'var(--text-main)'
                     }}
                   >
+                    <option value="natal">{c.form.services.natal}</option>
                     <option value="casal">{c.form.services.casal}</option>
                     <option value="retrato">{c.form.services.retrato}</option>
                     <option value="gravida">{c.form.services.gravida}</option>

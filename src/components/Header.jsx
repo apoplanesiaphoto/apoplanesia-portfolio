@@ -17,6 +17,7 @@ export default function Header({ lang, setLang, t }) {
   const isPortfolioActive = pathname.startsWith('/portfolio');
   const isPricingActive = pathname.startsWith('/precos');
   const isAboutActive = pathname.startsWith('/about');
+  const isFaqActive = pathname.startsWith('/faq');
   const isContactActive = pathname.startsWith('/contact');
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
@@ -54,6 +55,7 @@ export default function Header({ lang, setLang, t }) {
     { to: '/portfolio', label: t.nav.portfolio, active: isPortfolioActive },
     { to: '/precos', label: t.nav.pricing, active: isPricingActive },
     { to: '/about', label: t.nav.about, active: isAboutActive },
+    { to: '/faq', label: t.nav.faq, active: isFaqActive },
     { to: '/contact', label: t.nav.contact, active: isContactActive }
   ];
 
@@ -140,6 +142,20 @@ export default function Header({ lang, setLang, t }) {
             }}
           >
             {t.nav.about}
+          </Link>
+
+          <Link
+            to="/faq"
+            style={{
+              color: isFaqActive ? 'var(--accent-lilac-dark)' : 'var(--text-body)',
+              fontWeight: isFaqActive ? 700 : 500,
+              fontSize: '0.98rem',
+              transition: 'all 0.2s ease',
+              borderBottom: isFaqActive ? '2px solid var(--accent-lilac)' : '2px solid transparent',
+              paddingBottom: '0.25rem'
+            }}
+          >
+            {t.nav.faq}
           </Link>
 
           <Link
