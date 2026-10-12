@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, Gift, Calendar, MessageCircle, CheckCircle2 } from 'lucide-react';
+import { Gift, Calendar, MessageCircle, CheckCircle2 } from 'lucide-react';
 import ChristmasHatIcon from './ChristmasHatIcon';
 
 export default function ChristmasBanner({ lang, t }) {
@@ -11,162 +11,153 @@ export default function ChristmasBanner({ lang, t }) {
     <section 
       className="christmas-banner-section"
       style={{
-        padding: '3rem 0',
+        padding: '1.75rem 0',
         position: 'relative'
       }}
     >
       <div className="container">
         <div style={{
-          background: 'linear-gradient(135deg, #FFFDF8 0%, #FAF3EA 45%, #F5E8D8 100%)',
+          background: 'linear-gradient(135deg, #0F2D1E 0%, #16432C 50%, #0D2619 100%)',
           borderRadius: 'var(--radius-lg)',
-          border: '1.5px solid rgba(220, 180, 140, 0.45)',
-          boxShadow: '0 20px 48px -10px rgba(146, 64, 14, 0.08), 0 4px 20px rgba(0, 0, 0, 0.03)',
+          border: '1.5px solid rgba(212, 175, 55, 0.45)',
+          boxShadow: '0 16px 38px -8px rgba(10, 35, 20, 0.28), 0 4px 18px rgba(0, 0, 0, 0.08)',
           overflow: 'hidden',
           position: 'relative',
-          padding: 'clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3.5rem)',
-          textAlign: 'center'
+          padding: 'clamp(1.5rem, 3vw, 2.25rem) clamp(1.2rem, 3.5vw, 2.25rem)',
+          textAlign: 'center',
+          maxWidth: '820px',
+          margin: '0 auto'
         }}>
-          {/* Subtle Decorative Golden Warm Glows */}
+          {/* Subtle Holiday Ambient Glows */}
           <div style={{
             position: 'absolute',
-            top: '-60px',
-            right: '-60px',
-            width: '320px',
-            height: '320px',
+            top: '-50px',
+            right: '-50px',
+            width: '240px',
+            height: '240px',
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(245, 158, 11, 0.12) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(212, 175, 55, 0.18) 0%, transparent 70%)',
             pointerEvents: 'none'
           }} />
           <div style={{
             position: 'absolute',
-            bottom: '-60px',
-            left: '-60px',
-            width: '280px',
-            height: '280px',
+            bottom: '-50px',
+            left: '-50px',
+            width: '220px',
+            height: '220px',
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(220, 38, 38, 0.06) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(220, 38, 38, 0.16) 0%, transparent 70%)',
             pointerEvents: 'none'
           }} />
 
-          <div style={{ position: 'relative', zIndex: 1, maxWidth: '820px', margin: '0 auto' }}>
-            {/* Christmas Hat Hero Emblem */}
-            <div style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: '74px',
-              height: '74px',
-              borderRadius: '50%',
-              background: 'linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%)',
-              border: '2px solid rgba(245, 158, 11, 0.4)',
-              boxShadow: '0 8px 24px rgba(217, 119, 6, 0.18)',
-              marginBottom: '1.25rem',
-              transition: 'transform 0.3s ease'
-            }}>
-              <ChristmasHatIcon size={46} />
-            </div>
-
-            {/* Festive Pill Badge with Hat & Sparkles */}
-            <div style={{ marginBottom: '1.2rem' }}>
+          <div style={{ position: 'relative', zIndex: 1 }}>
+            {/* Top Festive Badge with Santa Hat */}
+            <div style={{ marginBottom: '0.75rem' }}>
               <span 
-                className="pill-badge" 
                 style={{
-                  background: 'rgba(254, 243, 199, 0.92)',
-                  color: '#92400E',
-                  border: '1px solid rgba(245, 158, 11, 0.35)',
-                  padding: '0.45rem 1.15rem',
-                  fontSize: '0.88rem',
-                  boxShadow: '0 2px 10px rgba(217, 119, 6, 0.08)'
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.45rem',
+                  background: 'rgba(255, 255, 255, 0.12)',
+                  backdropFilter: 'blur(8px)',
+                  border: '1px solid rgba(212, 175, 55, 0.4)',
+                  color: '#FDE68A',
+                  padding: '0.35rem 0.95rem',
+                  borderRadius: 'var(--radius-full)',
+                  fontSize: '0.82rem',
+                  fontWeight: 600,
+                  letterSpacing: '0.02em',
+                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.12)'
                 }}
               >
-                <ChristmasHatIcon size={16} />
-                <span style={{ fontWeight: 600 }}>{b.badge}</span>
-                <Sparkles size={14} color="#D97706" />
+                <ChristmasHatIcon size={18} />
+                <span>{b.badge}</span>
               </span>
             </div>
 
             {/* Main Headline */}
             <h2 style={{
               fontFamily: 'var(--font-heading)',
-              fontSize: 'clamp(2.1rem, 4.5vw, 3.2rem)',
-              lineHeight: 1.18,
-              color: 'var(--text-main)',
-              margin: '0 auto 1rem auto',
-              fontWeight: 600
+              fontSize: 'clamp(1.65rem, 3.2vw, 2.35rem)',
+              lineHeight: 1.2,
+              color: '#FFFDF7',
+              margin: '0 auto 0.5rem auto',
+              fontWeight: 600,
+              letterSpacing: '-0.01em'
             }}>
               {b.title}
             </h2>
 
             {/* Subtitle */}
             <p style={{
-              fontSize: 'clamp(1.05rem, 2vw, 1.22rem)',
-              lineHeight: 1.65,
-              color: 'var(--text-body)',
-              margin: '0 auto 2rem auto',
-              maxWidth: '680px'
+              fontSize: '0.98rem',
+              lineHeight: 1.55,
+              color: '#E2E8F0',
+              margin: '0 auto 1.15rem auto',
+              maxWidth: '620px'
             }}>
               {b.subtitle}
             </p>
 
             {/* Special Promotion Highlight Card (20€ Discount) */}
             <div style={{
-              background: 'linear-gradient(135deg, rgba(254, 243, 199, 0.85) 0%, rgba(254, 235, 200, 0.7) 100%)',
-              border: '1.5px dashed #D97706',
+              background: 'linear-gradient(135deg, rgba(185, 28, 28, 0.92) 0%, rgba(153, 27, 27, 0.95) 100%)',
+              border: '1.5px dashed rgba(253, 230, 138, 0.75)',
               borderRadius: 'var(--radius-md)',
-              padding: '1.25rem 1.75rem',
-              maxWidth: '620px',
-              margin: '0 auto 2.25rem auto',
+              padding: '0.75rem 1.25rem',
+              maxWidth: '560px',
+              margin: '0 auto 1.15rem auto',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: '1.15rem',
-              boxShadow: '0 6px 20px rgba(217, 119, 6, 0.08)',
+              gap: '0.85rem',
+              boxShadow: '0 4px 16px rgba(0, 0, 0, 0.25)',
               textAlign: 'left'
             }}>
               <div style={{
-                width: '50px',
-                height: '50px',
+                width: '38px',
+                height: '38px',
                 borderRadius: '50%',
-                background: 'linear-gradient(135deg, #D97706 0%, #B45309 100%)',
-                color: '#FFFFFF',
+                background: 'rgba(255, 255, 255, 0.18)',
+                border: '1px solid rgba(253, 230, 138, 0.5)',
+                color: '#FDE68A',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                flexShrink: 0,
-                boxShadow: '0 4px 14px rgba(217, 119, 6, 0.3)'
+                flexShrink: 0
               }}>
-                <Gift size={24} />
+                <Gift size={20} />
               </div>
               <div>
                 <div style={{
-                  fontSize: '0.8rem',
+                  fontSize: '0.72rem',
                   fontWeight: 700,
                   textTransform: 'uppercase',
-                  letterSpacing: '0.07em',
-                  color: '#B45309',
-                  marginBottom: '0.2rem'
+                  letterSpacing: '0.08em',
+                  color: '#FDE68A',
+                  marginBottom: '0.1rem'
                 }}>
                   {b.discountBadge}
                 </div>
                 <div style={{
-                  fontSize: '1.08rem',
+                  fontSize: '0.98rem',
                   fontWeight: 700,
-                  color: '#78350F',
-                  lineHeight: 1.35
+                  color: '#FFFFFF',
+                  lineHeight: 1.3
                 }}>
                   {b.discountText}
                 </div>
               </div>
             </div>
 
-            {/* Feature Highlights Grid */}
+            {/* Feature Highlights (Compact Inline Badges) */}
             <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-              gap: '0.75rem 1.25rem',
-              maxWidth: '720px',
-              margin: '0 auto 2.5rem auto',
-              textAlign: 'left'
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              gap: '0.45rem 0.85rem',
+              maxWidth: '660px',
+              margin: '0 auto 1.35rem auto'
             }}>
               {b.features?.map((feat, idx) => (
                 <div 
@@ -174,18 +165,17 @@ export default function ChristmasBanner({ lang, t }) {
                   style={{
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '0.65rem',
-                    fontSize: '0.95rem',
-                    color: 'var(--text-body)',
+                    gap: '0.45rem',
+                    fontSize: '0.85rem',
+                    color: '#F1F5F9',
                     fontWeight: 500,
-                    background: 'rgba(255, 255, 255, 0.7)',
-                    padding: '0.6rem 1rem',
-                    borderRadius: 'var(--radius-full)',
-                    border: '1px solid rgba(220, 180, 140, 0.3)',
-                    boxShadow: '0 2px 6px rgba(0, 0, 0, 0.02)'
+                    background: 'rgba(255, 255, 255, 0.08)',
+                    border: '1px solid rgba(255, 255, 255, 0.12)',
+                    padding: '0.35rem 0.75rem',
+                    borderRadius: 'var(--radius-full)'
                   }}
                 >
-                  <CheckCircle2 size={17} color="#D97706" style={{ flexShrink: 0 }} />
+                  <CheckCircle2 size={14} color="#34D399" style={{ flexShrink: 0 }} />
                   <span>{feat}</span>
                 </div>
               ))}
@@ -197,18 +187,21 @@ export default function ChristmasBanner({ lang, t }) {
               flexWrap: 'wrap',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: '1rem'
+              gap: '0.85rem'
             }}>
               <Link
                 to="/contact?service=natal"
                 className="btn-primary"
                 style={{
-                  padding: '0.9rem 2.2rem',
-                  fontSize: '1.02rem',
-                  boxShadow: '0 6px 20px rgba(142, 114, 158, 0.35)'
+                  background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
+                  color: '#FFFFFF',
+                  border: '1px solid rgba(255, 255, 255, 0.25)',
+                  boxShadow: '0 4px 18px rgba(220, 38, 38, 0.35)',
+                  padding: '0.75rem 1.6rem',
+                  fontSize: '0.94rem'
                 }}
               >
-                <Calendar size={18} />
+                <Calendar size={16} />
                 <span>{b.btnBook}</span>
               </Link>
 
@@ -218,11 +211,11 @@ export default function ChristmasBanner({ lang, t }) {
                 rel="noopener noreferrer"
                 className="btn-whatsapp"
                 style={{
-                  padding: '0.9rem 2.2rem',
-                  fontSize: '1.02rem'
+                  padding: '0.75rem 1.6rem',
+                  fontSize: '0.94rem'
                 }}
               >
-                <MessageCircle size={18} />
+                <MessageCircle size={16} />
                 <span>{b.btnWhatsapp}</span>
               </a>
             </div>
